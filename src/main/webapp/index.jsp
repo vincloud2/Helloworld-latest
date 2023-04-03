@@ -8,7 +8,7 @@
 </head>
 <body>
 <h1>Hello, World!</h1>
-<p>This is a sample "Hello, World!" application.</p>
+<p>This is a sample "Hello, World!" application for 2023 Batch.</p>
 </body>
 </html>
 
