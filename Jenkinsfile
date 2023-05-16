@@ -21,8 +21,8 @@ pipeline {
         } 
         stage('Docker_build') {
             steps {
-                echo 'Docker build_projectA'
-                sh 'docker build -t projecta .' 
+                echo 'Docker build_projectc'
+                sh 'docker build -t projectc .' 
             }
         }
         stage('login to dockerhub') {
@@ -34,26 +34,26 @@ pipeline {
         stage('Tag the Image') {
             steps {
                 echo 'Tag the Image'
-                sh 'docker tag  projecta vnom1985/projecta'
+                sh 'docker tag  projectc vnom1985/projectc'
             }
         } 
         stage('Deploy to docker hub') {
             steps {
                 echo 'Deploy to docker hub'
-                sh 'docker push vnom1985/projecta'
+                sh 'docker push vnom1985/projectc'
             }
         }
         stage('Remove Docker conatiner') {
             steps {
                 echo 'Remove Docker conatiner'
-                sh 'docker stop projecta_conatiner || true'
-                sh 'docker rm projecta_conatiner || true'
+                sh 'docker stop projectc_conatiner || true'
+                sh 'docker rm projectc_conatiner || true'
             }
         }        
         stage('Run docker image') {
             steps {
                 echo 'Deploy to docker hub'
-                sh 'docker run --name projecta_conatiner -d -p 8181:8080 vnom1985/projecta'
+                sh 'docker run --name projectc_conatiner -d -p 8181:8080 vnom1985/projecta'
             }
         }        
     }
