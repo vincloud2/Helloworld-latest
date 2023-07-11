@@ -3,16 +3,16 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Welcome to ABC BANK</title>
+<title>Welcome to gavisfirstrepo</title>
 <style>
   body {
-    background-color: blue;
+    background-color: yellow;
   }
 </style>
 </head>
 <body>
-<h1>Welcome to ABC BANK</h1>
-<p>This is a sample Welcome to ABC BANK application for 2023 July Batch.</p>
+<h1>Welcome to HELOWORLD</h1>
+<p>This is a sample Welcome to GAVIS WEBSITE application for 2023 July Batch.</p>
 </body>
 </html>
 
