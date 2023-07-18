@@ -1,0 +1,43 @@
+pipeline {
+    agent { label "slave1" }
+
+    stages {
+        stage('Stage1-cloning project') {
+            steps {
+                echo 'cloning project from git'
+                git 'https://github.com/vincloud2/Helloworld-latest.git'
+            }
+        }
+        stage('Stage2 -maven build') {
+            steps {
+                echo 'Maven build'
+                sh 'yum install maven -y'
+                sh 'mvn clean package'
+            }
+        } 
+        stage('Stage3-Deploy') {
+            steps {
+                echo 'Hello World -Deploy'
+                deploy adapters: [tomcat8(credentialsId: 'admin_tomcat', path: '', url: 'http://54.169.120.161:8080/')], contextPath: null, war: '**/*.war'
+            }
+        }
+        stage('Stage4-Testenv') {
+            steps {
+                echo 'Hello World -Deploy'
+                deploy adapters: [tomcat8(credentialsId: 'admin_tomcat', path: '', url: 'http://54.169.120.161:8080/')], contextPath: null, war: '**/*.war'
+            }
+        }
+        stage('Stage6-UAT') {
+            steps {
+                echo 'Hello World -Deploy'
+                deploy adapters: [tomcat8(credentialsId: 'admin_tomcat', path: '', url: 'http://54.169.120.161:8080/')], contextPath: null, war: '**/*.war'
+            }
+        }        
+        stage('Stage6-Production') {
+            steps {
+                echo 'Hello World -Deploy'
+                deploy adapters: [tomcat8(credentialsId: 'admin_tomcat', path: '', url: 'http://54.169.120.161:8080/')], contextPath: null, war: '**/*.war'
+            }
+        }        
+    }
+}
