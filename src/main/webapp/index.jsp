@@ -11,7 +11,7 @@
 </style>
 </head>
 <body>
-<h1>Welcome to XYZ BANK</h1>
+<h1>Welcome to abc BANK</h1>
 <p>This is a sample Welcome to XYZ BANK application for 2023 July Morrning Batch.</p>
 </body>
 </html>
