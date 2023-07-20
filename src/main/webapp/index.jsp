@@ -6,7 +6,7 @@
 <title>Welcome to XYZ BANK</title>
 <style>
   body {
-    background-color: red;
+    background-color: yellow;
   }
 </style>
 </head>
