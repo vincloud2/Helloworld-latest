@@ -55,6 +55,11 @@ pipeline {
                 echo 'Deploy to docker hub'
                 sh 'docker run --name projectd_conatiner -d -p 8181:8080 vnom1985/projectd'
             }
+        }
+        stage('added one more stage') {
+            steps {
+                echo 'added one more stage'                
+            }
         }        
     }
 }
