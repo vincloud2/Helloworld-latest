@@ -47,7 +47,7 @@ pipeline {
             steps {
                 echo 'Remove Docker conatiner'
                 sh 'docker stop projectd_conatiner || true'
-                sh 'docker rm projectdconatiner || true'
+                sh 'docker rm projectd_conatiner || true'
             }
         }        
         stage('Run docker image') {
