@@ -21,7 +21,7 @@ pipeline {
         } 
         stage('upload  to Nexus') {
             steps {
-              nexusArtifactUploader artifacts: [[artifactId: 'helloworld', classifier: '', file: '/var/jenkins/workspace/hello_world_july2023/target/helloworld-1.1-SNAPSHOT.war', type: 'war']], credentialsId: 'adm_nexus', groupId: 'com.example', nexusUrl: '13.229.234.4:8081', nexusVersion: 'nexus3', protocol: 'http', repository: 'my_maven', version: '1.1-SNAPSHOT'
+              nexusArtifactUploader artifacts: [[artifactId: 'helloworld', classifier: '', file: '/var/jenkins/workspace/mydocker_image_vinod/target/helloworld-1.1-SNAPSHOT.war', type: 'war']], credentialsId: 'adm_nexus', groupId: 'com.example', nexusUrl: '13.229.234.4:8081', nexusVersion: 'nexus3', protocol: 'http', repository: 'my_maven', version: '1.1-SNAPSHOT'
         }
     }
   }
