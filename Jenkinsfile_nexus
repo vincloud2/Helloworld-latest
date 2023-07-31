@@ -19,25 +19,9 @@ pipeline {
                 sh 'mvn -Dmaven.test.failure.ignore=true install'
             }
         } 
-        stage('Docker_build') {
+        stage('upload  to Nexus') {
             steps {
-                echo 'Docker build_projectd'
-                sh 'docker build -t projectd .' 
-            }
-        }
-        stage('Tag the Image') {
-            steps {
-                echo 'Tag the Image'
-                sh 'docker tag  projectd 13.229.234.4:8081/repository/mydockerimages/projectd:${BUILD_NUMBER}'
-            }
-        } 
-        stage('Deploy to Nexus') {
-            steps {
-                echo 'Deploy to Nexus'
-                withCredentials([usernamePassword(credentialsId: 'admin', usernameVariable: 'NEXUS_USERNAME', passwordVariable: 'NEXUS_PASSWORD')]) {
-                    sh 'docker login -u $NEXUS_USERNAME -p $NEXUS_PASSWORD 13.229.234.4:8081'
-                    sh 'docker push 13.229.234.4:8081/repository/mydockerimages/projectd:${BUILD_NUMBER}'
-            }
+              nexusArtifactUploader artifacts: [[artifactId: 'helloworld', classifier: '', file: '/var/jenkins/workspace/hello_world_july2023/target/helloworld-1.1-SNAPSHOT.war', type: 'war']], credentialsId: 'adm_nexus', groupId: 'com.example', nexusUrl: '13.229.234.4:8081', nexusVersion: 'nexus3', protocol: 'http', repository: 'my_maven', version: '1.1-SNAPSHOT'
         }
     }
   }
