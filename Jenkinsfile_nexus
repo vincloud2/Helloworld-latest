@@ -34,7 +34,7 @@ pipeline {
         stage('Deploy to Nexus') {
             steps {
                 echo 'Deploy to Nexus'
-                sh 'docker login -u admin -p admin 13.229.234.4:8081
+                sh 'docker login -u admin -p admin 13.229.234.4:8081'
                 sh 'docker push 13.229.234.4:8081/repository/mydockerimages/projectd:${BUILD_NUMBER}'
             }
         }
