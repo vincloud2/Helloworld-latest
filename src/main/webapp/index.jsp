@@ -3,16 +3,16 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Welcome to HDF INDIA BANK</title>
+<title>Welcome to Microdegree Devops traning K</title>
 <style>
   body {
-    background-color: red;
+    background-color: green;
   }
 </style>
 </head>
 <body>
-<h1>Welcome to HDF INDIA BANK</h1>
-<p>This is a sample Welcome to HDF BANK application for 2023 Aug Evening Batch.</p>
+<h1>Welcome to Microdegree Devops traning</h1>
+<p>This is a sample Welcome to Microdegree Devops traning for 2023 Aug Evening Batch.</p>
 </body>
 </html>
 
