@@ -1,0 +1,34 @@
+pipeline {
+    agent { label "projecta" }
+
+    stages {
+        stage('Stage1 clone') {
+            steps {
+                echo 'git clone the repo'
+                git 'https://github.com/vincloud2/Helloworld-latest.git'
+            }
+        }
+        stage('Stage2 Build') {
+            steps {
+                echo 'Build  the project'
+                sh "mvn -Dmaven.test.failure.ignore=true clean package"
+            }
+        }
+        stage('Stage3 Deploy') {
+            steps {
+                echo 'Deploy the project to Tomcat'
+                deploy adapters: [tomcat8(credentialsId: 'tomcat_admin', path: '', url: 'http://18.143.74.1:8080/')], contextPath: null, war: '**/*.war'
+            }
+        }
+        stage('Stage4 Deploy') {
+            steps {
+                echo 'Deploy the project to test team 2'
+            }
+        }
+        stage('Stage5 Deploy') {
+            steps {
+                echo 'Deploy the project to [production]'
+            }
+        }        
+    }
+}
