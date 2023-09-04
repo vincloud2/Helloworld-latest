@@ -20,12 +20,12 @@ pipeline {
                 deploy adapters: [tomcat8(credentialsId: 'tomcat_admin', path: '', url: 'http://18.143.74.1:8080/')], contextPath: null, war: '**/*.war'
             }
         }
-        stage('Stage4 Deploy') {
+        stage('Stage6 Deploy') {
             steps {
                 echo 'Deploy the project to test team 2'
             }
         }
-        stage('Stage5 Deploy') {
+        stage('Stage7 Production') {
             steps {
                 echo 'Deploy the project to [production]'
             }
