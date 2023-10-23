@@ -1,0 +1,24 @@
+pipeline {
+    agent { label "slave1" }
+
+    stages {
+        stage('step 1') {
+            steps {
+                echo 'clone hello world project '
+                git 'https://github.com/vincloud2/Helloworld-latest.git'
+            }
+        }
+        stage('step 2') {
+            steps {
+                echo 'build project '
+                sh 'mvn clean package'
+            }
+        }
+        stage('step 3') {
+            steps {
+                echo 'deploy project'
+                deploy adapters: [tomcat8(credentialsId: 'tomcat_admin', path: '', url: 'http://54.169.16.77:8080/')], contextPath: null, war: '**/*.war'
+            }
+        }        
+    }
+}
