@@ -12,6 +12,7 @@ and running it */
         stage('step 2') {
             steps {
                 echo 'build project '
+                sh 'yum install maven -y'
                 sh 'mvn clean package'
             }
         }
