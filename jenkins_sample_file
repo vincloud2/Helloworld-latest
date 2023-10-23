@@ -25,6 +25,30 @@ pipeline {
                 echo 'deploy project_tenv'
                 deploy adapters: [tomcat8(credentialsId: 'tomcat_admin', path: '', url: 'http://54.169.16.74:8080/')], contextPath: null, war: '**/*.war'
             }
+        }
+        stage('step 5') {
+            steps {
+                echo 'deploy project_tenv'
+                deploy adapters: [tomcat8(credentialsId: 'tomcat_admin', path: '', url: 'http://54.169.16.74:8080/')], contextPath: null, war: '**/*.war'
+            }
+        }
+        stage('step 6') {
+            steps {
+                echo 'deploy project_tenv'
+                deploy adapters: [tomcat8(credentialsId: 'tomcat_admin', path: '', url: 'http://54.169.16.74:8080/')], contextPath: null, war: '**/*.war'
+            }
+        } 
+        stage('step 7') {
+            steps {
+                echo 'deploy project_tenv'
+                deploy adapters: [tomcat8(credentialsId: 'tomcat_admin', path: '', url: 'http://54.169.16.74:8080/')], contextPath: null, war: '**/*.war'
+            }
+        } 
+        stage('step 8') {
+            steps {
+                echo 'deploy project_tenv'
+                deploy adapters: [tomcat8(credentialsId: 'tomcat_admin', path: '', url: 'http://54.169.16.74:8080/')], contextPath: null, war: '**/*.war'
+            }
         } 
     }
 }
