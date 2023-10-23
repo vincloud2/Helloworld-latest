@@ -1,6 +1,7 @@
 pipeline {
     agent { label "slave1" }
-
+/* I am using agent slave1 
+and running it /*
     stages {
         stage('step 1') {
             steps {
