@@ -17,8 +17,14 @@ pipeline {
         stage('step 3') {
             steps {
                 echo 'deploy project'
-                deploy adapters: [tomcat8(credentialsId: 'tomcat_admin', path: '', url: 'http://54.169.16.77:8080/')], contextPath: null, war: '**/*.war'
+                deploy adapters: [tomcat8(credentialsId: 'tomcat_admin', path: '', url: 'http://54.169.16.74:8080/')], contextPath: null, war: '**/*.war'
             }
-        }        
+        } 
+        stage('step 4') {
+            steps {
+                echo 'deploy project_tenv'
+                deploy adapters: [tomcat8(credentialsId: 'tomcat_admin', path: '', url: 'http://54.169.16.74:8080/')], contextPath: null, war: '**/*.war'
+            }
+        } 
     }
 }
