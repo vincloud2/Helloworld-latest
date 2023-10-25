@@ -1,7 +1,6 @@
 pipeline {
     agent { label "slave1" }
-/* I am using agent slave1 
-and running it */
+
     stages {
         stage('step 1') {
             steps {
@@ -19,37 +18,37 @@ and running it */
         stage('step 3') {
             steps {
                 echo 'deploy project'
-                deploy adapters: [tomcat8(credentialsId: 'tomcat_admin', path: '', url: 'http://54.169.16.74:8080/')], contextPath: null, war: '**/*.war'
+                deploy adapters: [tomcat8(credentialsId: 'tomcat_admin', path: '', url: 'http://172.31.30.186:8080/')], contextPath: null, war: '**/*.war'
             }
         } 
         stage('step 4') {
             steps {
                 echo 'deploy project_tenv'
-                //deploy adapters: [tomcat8(credentialsId: 'tomcat_admin', path: '', url: 'http://54.169.16.74:8080/')], contextPath: null, war: '**/*.war'
+                //deploy adapters: [tomcat8(credentialsId: 'tomcat_admin', path: '', url: 'http://172.31.30.186:8080/')], contextPath: null, war: '**/*.war'
             }
         }
         stage('step 5') {
             steps {
                 echo 'deploy project_tenv'
-               // deploy adapters: [tomcat8(credentialsId: 'tomcat_admin', path: '', url: 'http://54.169.16.74:8080/')], contextPath: null, war: '**/*.war'
+               // deploy adapters: [tomcat8(credentialsId: 'tomcat_admin', path: '', url: 'http://172.31.30.186:8080/')], contextPath: null, war: '**/*.war'
             }
         }
         stage('step 6') {
             steps {
                 echo 'deploy project_tenv'
-               // deploy adapters: [tomcat8(credentialsId: 'tomcat_admin', path: '', url: 'http://54.169.16.74:8080/')], contextPath: null, war: '**/*.war'
+               // deploy adapters: [tomcat8(credentialsId: 'tomcat_admin', path: '', url: 'http://172.31.30.186:8080/')], contextPath: null, war: '**/*.war'
             }
         } 
         stage('step 7') {
             steps {
                 echo 'deploy project_tenv'
-                //deploy adapters: [tomcat8(credentialsId: 'tomcat_admin', path: '', url: 'http://54.169.16.74:8080/')], contextPath: null, war: '**/*.war'
+                //deploy adapters: [tomcat8(credentialsId: 'tomcat_admin', path: '', url: 'http://172.31.30.186:8080/')], contextPath: null, war: '**/*.war'
             }
         } 
         stage('step 8') {
             steps {
                 echo 'deploy project_tenv'
-               // deploy adapters: [tomcat8(credentialsId: 'tomcat_admin', path: '', url: 'http://54.169.16.74:8080/')], contextPath: null, war: '**/*.war'
+               // deploy adapters: [tomcat8(credentialsId: 'tomcat_admin', path: '', url: 'http://172.31.30.186:8080/')], contextPath: null, war: '**/*.war'
             }
         } 
     }
