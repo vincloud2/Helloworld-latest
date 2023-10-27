@@ -6,7 +6,7 @@
 <title> Welcome to Devops traning  2026 </title>
 <style>
   body {
-    background-color: blue;
+    background-color: red;
   }
 </style>
 </head>
