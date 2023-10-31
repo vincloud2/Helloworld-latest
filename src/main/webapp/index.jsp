@@ -3,16 +3,16 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title> Welcome to Devops traning  2026 </title>
+<title> Welcome to Devops traning  2029 </title>
 <style>
   body {
-    background-color: red;
+    background-color: blue;
   }
 </style>
 </head>
 <body>
-<h1>Welcome to  Devops traning 2026 </h1>
-<p> Welcome to  Devops traning for 2026 oct Evening Batch.</p>
+<h1>Welcome to  Devops traning 2029 </h1>
+<p> Welcome to  Devops traning for 2029 oct Evening Batch.</p>
 </body>
 </html>
 
