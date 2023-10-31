@@ -5,7 +5,7 @@ pipeline {
         stage('Stage1-cloning project') {
             steps {
                 echo 'cloning project from git'
-                git 'https://github.com/vincloud2/Helloworld-latest.git'
+                git 'https://github.com/vincloud2/Helloworld-latest.gi'
             }
         }
         stage('Stage2 -maven build') {
