@@ -1,1 +1,3 @@
 sample_file.txt
+What are examples of code?
+Here's a simple example of code, written in the Python language: print 'Hello, world!' Many coding tutorials use that command as their very first example, because it's one of the simplest examples of code you can have – it 'prints' (displays) the text 'Hello, world!
