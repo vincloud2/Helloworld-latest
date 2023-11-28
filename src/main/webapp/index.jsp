@@ -3,7 +3,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title> Welcome to Devops traning  2029 </title>
+<title> SBI M C bANK </title>
 <style>
   body {
     background-color: red;
@@ -11,8 +11,8 @@
 </style>
 </head>
 <body>
-<h1>Welcome to  Devops traning 2029 </h1>
-<p> Welcome to  Devops traning for 2029 oct Evening Batch.</p>
+<h1>SBI M C bANK </h1>
+<p> Welcome to  SBI M C bANK.</p>
 </body>
 </html>
 
