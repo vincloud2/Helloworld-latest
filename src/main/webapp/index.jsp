@@ -3,16 +3,16 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title> SBI M C bANK </title>
+<title> Welcome  to devops   </title>
 <style>
   body {
-    background-color: blue;
+    background-color: green;
   }
 </style>
 </head>
 <body>
-<h1>SBI M C bANK </h1>
-<p> Welcome to  SBI M C bANK.</p>
+<h1>Welcome  to devops </h1>
+<p>Welcome  to devops.</p>
 </body>
 </html>
 
