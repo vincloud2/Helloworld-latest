@@ -6,7 +6,7 @@
 <title> SBI M C bANK </title>
 <style>
   body {
-    background-color: red;
+    background-color: blue;
   }
 </style>
 </head>
