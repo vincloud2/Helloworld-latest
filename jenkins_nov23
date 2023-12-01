@@ -38,7 +38,7 @@ pipeline {
                deploy adapters: [tomcat8(credentialsId: 'tomcat_admin', path: '', url: 'http://172.31.20.37:8080/')], contextPath: null, war: '**/*.war'
             }
         }
-        stage('7rd Step-deploy ') {
+        stage('8th Step-success ') {
             steps {
                echo 'success'
             }
