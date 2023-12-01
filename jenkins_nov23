@@ -40,7 +40,7 @@ pipeline {
         }
         stage('7rd Step-deploy ') {
             steps {
-               echo success
+               echo 'success'
             }
         } 
     }
