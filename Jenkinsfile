@@ -53,7 +53,7 @@ pipeline {
         stage('Run docker image') {
             steps {
                 echo 'Deploy to docker hub'
-                sh 'docker run --name project_vinod_conatiner -d -p 8181:8080 vnom1985/projectd'
+                sh 'docker run --name project_vinod_conatiner -d -p 8181:8080 vnom1985/project_vinod'
             }
         }
         stage('added one more stage') {
