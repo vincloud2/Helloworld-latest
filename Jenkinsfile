@@ -22,7 +22,7 @@ pipeline {
         stage('Docker_build') {
             steps {
                 echo 'Docker build_projectd'
-                sh 'docker build -t projectd .' 
+                sh 'docker build -t project_vinod .' 
             }
         }
         stage('login to dockerhub') {
@@ -34,26 +34,26 @@ pipeline {
         stage('Tag the Image') {
             steps {
                 echo 'Tag the Image'
-                sh 'docker tag  projectd vnom1985/projectd'
+                sh 'docker tag  project_vinod vnom1985/project_vinod'
             }
         } 
         stage('Deploy to docker hub') {
             steps {
                 echo 'Deploy to docker hub'
-                sh 'docker push vnom1985/projectd'
+                sh 'docker push vnom1985/project_vinod'
             }
         }
         stage('Remove Docker conatiner') {
             steps {
                 echo 'Remove Docker conatiner'
-                sh 'docker stop projectd_conatiner || true'
-                sh 'docker rm projectd_conatiner || true'
+                sh 'docker stop project_vinod_conatiner || true'
+                sh 'docker rm project_vinod_conatiner || true'
             }
         }        
         stage('Run docker image') {
             steps {
                 echo 'Deploy to docker hub'
-                sh 'docker run --name projectd_conatiner -d -p 8181:8080 vnom1985/projectd'
+                sh 'docker run --name project_vinod_conatiner -d -p 8181:8080 vnom1985/projectd'
             }
         }
         stage('added one more stage') {
