@@ -13,7 +13,7 @@
 
   <name>Hello World Web Application</name>
   <url>http://www.example.com</url>
-
+<!--demo github--!>
   <dependencies>
     <dependency>
       <groupId>javax.servlet</groupId>
