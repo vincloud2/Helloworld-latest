@@ -9,7 +9,7 @@
   <groupId>com.example</groupId>
   <artifactId>helloworld</artifactId>
   <version>1.4-SNAPSHOT</version>
-  <packaging>war</packaging>
+  <packaging>jar</packaging>
 
   <name>Hello World Web Application</name>
   <url>http://www.example.com</url>
