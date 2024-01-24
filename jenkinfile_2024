@@ -9,7 +9,7 @@ pipeline {
         }
         stage('2nd_step_build') {
             steps {
-                sh 'mvn cleanfff package'
+                sh 'mvn clean package'
             }
         }
         stage('3rd_step_Deploy') {
