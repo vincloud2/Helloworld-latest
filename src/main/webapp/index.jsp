@@ -6,7 +6,7 @@
 <title> Welcome  to devops   </title>
 <style>
   body {
-    background-color: white;
+    background-color: blue;
   }
 </style>
 </head>
