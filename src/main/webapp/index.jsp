@@ -6,13 +6,13 @@
 <title> Welcome  to devops   </title>
 <style>
   body {
-    background-color: red;
+    background-color: white;
   }
 </style>
 </head>
 <body>
-<h1>Welcome  to devops 2024 </h1>
-<p>Welcome  to devops 2024 </p>
+<h1>Welcome  to devops 2025 </h1>
+<p>Welcome  to devops 2025 </p>
 </body>
 </html>
 
