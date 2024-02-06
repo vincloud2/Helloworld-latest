@@ -1,0 +1,26 @@
+pipeline {
+    agent {label "projecta"}
+
+    stages {
+        stage('git clone') {
+            steps {
+                git 'https://github.com/vincloud2/Helloworld-latest.git'
+            }
+        }
+        stage('maven build') {
+            steps {
+                sh 'mvn clean package'
+            }
+        }
+        stage('test deploy') {
+            steps {
+                deploy adapters: [tomcat8(credentialsId: 'tomcat_admin', path: '', url: 'http://18.143.151.119:8080/')], contextPath: null, war: '**/*.war'
+            }
+        }
+        stage('nexus upload') {
+            steps {
+                nexusArtifactUploader artifacts: [[artifactId: 'helloworld', classifier: '', file: '/var/jenkins/workspace/projecta_hello_world/target/helloworld-2.0-SNAPSHOT.war', type: 'war']], credentialsId: 'nexus_admin', groupId: 'com.example', nexusUrl: '47.129.9.206:8081', nexusVersion: 'nexus3', protocol: 'http', repository: 'projecta', version: '2.0-SNAPSHOT'
+            }
+        }        
+    }
+}
